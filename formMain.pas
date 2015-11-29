@@ -1,3 +1,16 @@
+{
+******************************************************
+  Atoms Game
+  By Bennyboy
+  Http://quickandeasysoftware.net
+******************************************************
+}
+{
+  This Source Code Form is subject to the terms of the Mozilla Public
+  License, v. 2.0. If a copy of the MPL was not distributed with this
+  file, You can obtain one at http://mozilla.org/MPL/2.0/.
+}
+
 unit formMain;
 
 interface
@@ -66,6 +79,7 @@ var
   fAudioHandle: HSTREAM;
   Player1AtomCount, Player2AtomCount: integer;
   Muted: boolean = false;
+  Busy: boolean = false;
 
 const
   strAppVersion: string = '0.3';
@@ -98,6 +112,9 @@ begin
   begin
     exit;
   end;
+
+  //Stop other clicks while explosions are happening
+  Busy := true;
 
   inc(CurrentTurn);
 
@@ -166,6 +183,7 @@ begin
 
   //Change to the next player
   ChangePlayer;
+  Busy := false;
 end;
 
 procedure TfrmMain.Explode(y, x: integer);
@@ -379,6 +397,9 @@ end;
 
 procedure TfrmMain.AtomClickHandler(Sender: TObject);
 begin
+  //Dont allow other clicks while other explosions happening
+  if Busy then exit;
+
   if Sender = lblCell0 then AddAtom(0, 0, TLabel(Sender))
   else
   if Sender = lblCell1 then AddAtom(0, 1, TLabel(Sender))
@@ -504,6 +525,7 @@ begin
   //Reset everything
   CurrentTurn := 0;
   CurrentPlayer := 0;
+  Busy := false;
 
   for i := 0 to High(AtomsArray)  do
     for j := 0 to High(AtomsArray[i]) do

@@ -16,14 +16,14 @@ unit formMain;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, bass, Vcl.Imaging.pngimage, System.UITypes;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Vcl.ExtCtrls, Vcl.Imaging.pngimage, System.UITypes,
+  bass;
 
 type
   T2dArray = array of array of integer;
 
   TfrmMain = class(TForm)
-    panelAtoms: TPanel;
     lblCell0, lblCell1, lblCell2, lblCell3, lblCell4, lblCell5, lblCell6,
     lblCell7, lblCell8, lblCell9, lblCell10, lblCell11, lblCell12, lblCell13,
     lblCell14, lblCell15, lblCell16, lblCell17, lblCell18, lblCell19, lblCell20,
@@ -31,15 +31,10 @@ type
     lblCell28, lblCell29, lblCell30, lblCell31, lblCell32, lblCell33, lblCell34,
     lblCell35, lblCell36, lblCell37, lblCell38, lblCell39, lblCell40, lblCell41,
     lblCell42, lblCell43, lblCell44, lblCell45, lblCell46, lblCell47, lblCell48,
-    lblDebug: TLabel;
-    panelBottom: TPanel;
-    lblPlayer: TLabel;
-    Image1: TImage;
-    Image2: TImage;
-    lblPlayer1AtomCount: TLabel;
-    lblPlayer2AtomCount: TLabel;
-    lblMusic: TLabel;
+    lblDebug, lblPlayer1AtomCount, lblPlayer2AtomCount, lblPlayer, lblMusic,
     lblAbout: TLabel;
+    panelAtoms, panelBottom: TPanel;
+    imagePlayer1, imagePlayer2: TImage;
     procedure AtomClickHandler(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -63,7 +58,7 @@ type
     procedure PlayMusic(Restart: boolean = true);
     procedure StopMusic;
     procedure CountAtomsAndUpdateLabels;
-    procedure AnimateIntro;
+    procedure AnimateGrid;
   public
   end;
 
@@ -85,7 +80,13 @@ const
   strAppVersion: string = '0.3';
   strAppTitle:   string = 'Atoms';
   strAppURL:     string = 'http://quickandeasysoftware.net';
-
+  strAboutText:  string =  'Based on Atoms on the Amiga by Tom Kuhn - although many versions of this game exist, his excellent version is the one I first played back in 1993. The music is taken from his version.' + #13#13 +
+                          'Rules:' + #13 +
+                          'Players take turns to place atoms on the grid' + #13 +
+                          'Different boxes on the grid can hold different amounts of atoms. When boxes have too many atoms placed in them they will explode. Players can only place atoms on empty boxes or boxes containing atoms of their own colour.' + #13#13 +
+                          'Corner boxes can hold only one atom before exploding.' + #13 +
+                          'Side boxes can hold only two atoms before exploding.' + #13 +
+                          'Middle boxes can hold three atoms before exploding.';
 implementation
 
 {$R *.dfm}
@@ -123,7 +124,10 @@ begin
   ALabel.Color := CurrentColour;
 
   IncArrayAndRedraw(y, x);
-  lblDebug.Caption := 'Y: ' + inttostr(y) + #13 + 'X: ' + inttostr(x) + #13 + 'V: ' + inttostr( AtomsArray[y, x, 0] );
+
+  {$IFDEF DEBUG}
+    lblDebug.Caption := 'Y: ' + inttostr(y) + #13 + 'X: ' + inttostr(x) + #13 + 'V: ' + inttostr( AtomsArray[y, x, 0] );
+  {$ENDIF}
 
   //Check if in corner
   if IsCornerAtom(y, x) then
@@ -137,18 +141,18 @@ begin
     if AtomsArray[y, x, 0] > 2 then
       Explode (y, x);
   end
-  else //Must be central atom
+  else //Must be a central atom
     if AtomsArray[y, x, 0] > 3 then
       Explode(y, x);
 
-
+  //Update atom count labels
   CountAtomsAndUpdateLabels;
 
   //Check if anyone's won after the initial explosions
   if CurrentTurn > 2 then
   begin
     Winner := CheckIfSomeoneWon;
-    if Winner <> -1 then
+    if Winner > -1 then
     begin
       DisplayWinnerAndReset(Winner);
       exit;
@@ -162,7 +166,6 @@ begin
     OverloadedAtoms := FindOverloadedAtoms;
     if length(OverloadedAtoms) = 0 then
       break;
-
 
     //sleep(200); //Give us time to see it exploding
     for I := 0 to length(OverloadedAtoms) -1 do
@@ -389,7 +392,7 @@ begin
     ALabel.Color := CurrentColour;
 end;
 
-procedure TfrmMain.AnimateIntro;
+procedure TfrmMain.AnimateGrid;
 begin
   AnimateWindow(panelAtoms.Handle , 1, AW_CENTER or AW_HIDE);
   AnimateWindow(panelAtoms.Handle , 800, AW_CENTER );
@@ -519,6 +522,9 @@ procedure TfrmMain.DisplayWinnerAndReset(WinningPlayer: integer);
 var
   i, j: integer;
 begin
+  //Let the previous animations appear
+  Application.ProcessMessages;
+
   StopMusic;
   MessageDlg('Player ' + inttostr(WinningPlayer) + ' wins in ' + inttostr(CurrentTurn) + ' turns!' ,mtInformation, [mbOk], 0);
 
@@ -540,7 +546,7 @@ begin
   if Muted = false then
     PlayMusic;
 
-  AnimateIntro;
+  AnimateGrid;
 end;
 
 procedure TfrmMain.IncArrayAndRedraw(y, x: integer);
@@ -662,7 +668,7 @@ end;
 //******************************************Form Stuff*******************************************
 procedure TfrmMain.FormActivate(Sender: TObject);
 begin
-  AnimateIntro;
+  AnimateGrid;
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
@@ -725,14 +731,8 @@ begin
   MessageDlg(strAppTitle + ' ' + strAppVersion + #13 +
   'By Bennyboy' + #13 +
   strAppURL + #13#13 +
-  'Based on Atoms on the Amiga by Tom Kuhn - although many versions of this game exist, his excellent version is the one I first played back in 1993. The music is taken from his version.' + #13#13 +
-  'Rules:' + #13 +
-  'Players take turns to place atoms on the grid' + #13 +
-  'Different boxes on the grid can hold different amounts of atoms. When boxes have too many atoms placed in them they will explode. Players can only place atoms on empty boxes or boxes containing atoms of their own colour.' + #13#13 +
-  'Corner boxes can hold only one atom before exploding.' + #13 +
-  'Side boxes can hold only two atoms before exploding.' + #13 +
-  'Middle boxes can hold three atoms before exploding.'
-   ,mtInformation, [mbOk], 0);
+  strAboutText,
+  mtInformation, [mbOk], 0);
 end;
 
 procedure TfrmMain.lblMusicClick(Sender: TObject);

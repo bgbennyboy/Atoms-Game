@@ -4,12 +4,12 @@ object frmMain: TfrmMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Atoms'
-  ClientHeight = 346
-  ClientWidth = 282
+  ClientHeight = 452
+  ClientWidth = 363
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
@@ -17,39 +17,43 @@ object frmMain: TfrmMain
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
-  TextHeight = 13
+  PixelsPerInch = 120
+  TextHeight = 17
   object lblDebug: TLabel
     Left = 0
-    Top = 365
-    Width = 33
-    Height = 13
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
+    Top = 477
+    Width = 44
+    Height = 17
     Caption = 'DEBUG'
   end
   object panelAtoms: TPanel
     Left = 0
     Top = 1
-    Width = 281
-    Height = 279
+    Width = 367
+    Height = 365
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BevelOuter = bvLowered
     BorderWidth = 1
     TabOrder = 0
     object lblCell1: TLabel
-      Left = 46
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 10
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -58,17 +62,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell2: TLabel
-      Left = 84
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 10
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -77,17 +85,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell3: TLabel
-      Left = 122
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 10
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -96,17 +108,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell4: TLabel
-      Left = 160
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 10
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -115,17 +131,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell5: TLabel
-      Left = 198
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 10
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -134,17 +154,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell6: TLabel
-      Left = 236
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 10
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -153,17 +177,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell7: TLabel
-      Left = 8
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 60
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -172,17 +200,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell8: TLabel
-      Left = 46
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 60
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -191,17 +223,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell9: TLabel
-      Left = 84
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 60
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -210,17 +246,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell10: TLabel
-      Left = 122
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 60
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -229,17 +269,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell11: TLabel
-      Left = 160
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 60
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -248,17 +292,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell12: TLabel
-      Left = 198
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 60
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -267,17 +315,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell13: TLabel
-      Left = 236
-      Top = 46
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 60
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -286,17 +338,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell14: TLabel
-      Left = 8
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 110
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -305,17 +361,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell15: TLabel
-      Left = 46
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 110
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -324,17 +384,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell16: TLabel
-      Left = 84
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 110
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -343,17 +407,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell17: TLabel
-      Left = 122
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 110
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -362,17 +430,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell18: TLabel
-      Left = 160
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 110
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -381,17 +453,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell19: TLabel
-      Left = 198
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 110
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -400,17 +476,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell20: TLabel
-      Left = 236
-      Top = 84
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 110
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -419,17 +499,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell21: TLabel
-      Left = 8
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 160
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -438,17 +522,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell22: TLabel
-      Left = 46
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 160
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -457,17 +545,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell23: TLabel
-      Left = 84
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 160
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -476,17 +568,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell24: TLabel
-      Left = 122
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 160
+      Width = 41
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -495,17 +591,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell25: TLabel
-      Left = 160
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 160
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -514,17 +614,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell26: TLabel
-      Left = 198
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 160
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -533,17 +637,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell27: TLabel
-      Left = 236
-      Top = 122
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 160
+      Width = 41
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -552,17 +660,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell28: TLabel
-      Left = 8
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 211
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -571,17 +683,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell29: TLabel
-      Left = 46
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 211
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -590,17 +706,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell30: TLabel
-      Left = 84
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 211
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -609,17 +729,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell31: TLabel
-      Left = 122
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 211
+      Width = 41
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -628,17 +752,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell32: TLabel
-      Left = 160
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 211
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -647,17 +775,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell33: TLabel
-      Left = 198
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 211
+      Width = 42
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -666,17 +798,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell34: TLabel
-      Left = 236
-      Top = 161
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 211
+      Width = 41
+      Height = 41
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -685,17 +821,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell35: TLabel
-      Left = 8
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 260
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -705,17 +845,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell36: TLabel
-      Left = 46
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 260
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -724,17 +868,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell37: TLabel
-      Left = 84
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 260
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -743,17 +891,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell38: TLabel
-      Left = 122
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 260
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -762,17 +914,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell39: TLabel
-      Left = 160
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 260
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -781,17 +937,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell40: TLabel
-      Left = 198
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 260
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -800,17 +960,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell41: TLabel
-      Left = 236
-      Top = 199
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 260
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -819,17 +983,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell42: TLabel
-      Left = 8
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 310
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -838,17 +1006,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell43: TLabel
-      Left = 46
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 60
+      Top = 310
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -857,17 +1029,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell44: TLabel
-      Left = 84
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 110
+      Top = 310
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -876,17 +1052,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell45: TLabel
-      Left = 122
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 160
+      Top = 310
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -895,17 +1075,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell46: TLabel
-      Left = 160
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 209
+      Top = 310
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -914,17 +1098,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell47: TLabel
-      Left = 198
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 259
+      Top = 310
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -933,17 +1121,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell48: TLabel
-      Left = 236
-      Top = 237
-      Width = 32
-      Height = 32
+      Left = 309
+      Top = 310
+      Width = 41
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -952,17 +1144,21 @@ object frmMain: TfrmMain
       OnClick = AtomClickHandler
     end
     object lblCell0: TLabel
-      Left = 8
-      Top = 8
-      Width = 32
-      Height = 32
+      Left = 10
+      Top = 10
+      Width = 42
+      Height = 42
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taCenter
       AutoSize = False
       Caption = 'O'
       Color = clCream
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 17
+      Font.Height = 22
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -973,39 +1169,44 @@ object frmMain: TfrmMain
   end
   object panelBottom: TPanel
     Left = 0
-    Top = 280
-    Width = 282
-    Height = 66
+    Top = 366
+    Width = 363
+    Height = 86
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alBottom
     BevelOuter = bvLowered
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 369
     DesignSize = (
-      282
-      66)
+      363
+      86)
     object lblPlayer: TLabel
-      Left = 108
-      Top = 11
-      Width = 53
-      Height = 25
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
+      Left = 141
+      Top = 14
+      Width = 64
+      Height = 31
       Alignment = taCenter
       Caption = 'Player'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -19
+      Font.Height = -23
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object Image1: TImage
-      Left = 8
-      Top = 8
+    object imagePlayer1: TImage
+      Left = 10
+      Top = 15
       Width = 32
       Height = 32
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       AutoSize = True
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
@@ -2612,11 +2813,15 @@ object frmMain: TfrmMain
         B3345C989529530C4BC36526033359128D3B7343B2F51D76BA5677907C2BD500
         00000049454E44AE426082}
     end
-    object Image2: TImage
-      Left = 243
-      Top = 8
+    object imagePlayer2: TImage
+      Left = 318
+      Top = 15
       Width = 32
       Height = 32
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       AutoSize = True
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
@@ -4228,50 +4433,46 @@ object frmMain: TfrmMain
         40577382E75E7B0000000049454E44AE426082}
     end
     object lblPlayer1AtomCount: TLabel
-      Left = 46
-      Top = 11
-      Width = 11
-      Height = 25
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
+      Left = 60
+      Top = 14
+      Width = 13
+      Height = 31
       Alignment = taCenter
       Caption = '0'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -19
+      Font.Height = -23
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblPlayer2AtomCount: TLabel
-      Left = 219
-      Top = 11
-      Width = 11
-      Height = 25
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
+      Left = 286
+      Top = 14
+      Width = 13
+      Height = 31
       Alignment = taCenter
       Caption = '0'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -19
+      Font.Height = -23
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblMusic: TLabel
-      Left = 8
-      Top = 46
-      Width = 64
-      Height = 20
+      Left = 10
+      Top = 55
+      Width = 86
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Music On'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -20
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
@@ -4280,16 +4481,20 @@ object frmMain: TfrmMain
       OnMouseLeave = labelRemoveUnderlineOnMouseLeave
     end
     object lblAbout: TLabel
-      Left = 233
-      Top = 46
-      Width = 42
-      Height = 20
+      Left = 294
+      Top = 55
+      Width = 56
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'About'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -20
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False

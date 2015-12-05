@@ -3,7 +3,7 @@
         <ProjectGuid>{A584AE99-0BB0-4118-8546-1543EEF43C80}</ProjectGuid>
         <ProjectVersion>15.4</ProjectVersion>
         <MainSource>Atoms.dpr</MainSource>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
         <Base>True</Base>
         <TargetedPlatforms>1</TargetedPlatforms>
@@ -95,7 +95,8 @@
         <DCCReference Include="formMain.pas">
             <Form>frmMain</Form>
         </DCCReference>
-        <RcItem Include="mainmod.mod">
+        <DCCReference Include="uAtoms.pas"/>
+        <RcItem Include="Other\mainmod.mod">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>MusicMod</ResourceId>

@@ -1,10 +1,13 @@
 program Atoms;
 
+
+
 {$R *.dres}
 
 uses
   Forms,
-  formMain in 'formMain.pas' {frmMain};
+  formMain in 'formMain.pas' {frmMain},
+  uAtoms in 'uAtoms.pas';
 
 {$R *.res}
 
